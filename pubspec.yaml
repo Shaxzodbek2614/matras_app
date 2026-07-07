@@ -1,0 +1,61 @@
+name: matras_app
+description: Sotuvchi uchun Matras Savdo Boshqaruv Ilovasi
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.3.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.6
+
+  # State management
+  provider: ^6.1.2
+
+  # Navigation
+  go_router: ^14.2.0
+
+  # Backend
+  supabase_flutter: ^2.5.6
+
+  # HTTP (Telegram Bot API uchun)
+  http: ^1.2.1
+
+  # Formatting
+  intl: ^0.19.0
+
+  # Local storage (parolni saqlash uchun emas, sozlamalar uchun)
+  shared_preferences: ^2.2.3
+
+  # UI helpers
+  flutter_svg: ^2.0.10+1
+
+  # Internet aloqasini kuzatish
+  connectivity_plus: ^6.0.5
+
+  # Telefon qo'ng'iroq qilish uchun
+  url_launcher: ^6.3.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  flutter_launcher_icons: ^0.14.1
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/icon/
+
+# Ilova ikonkasini generatsiya qilish sozlamalari.
+# Ishga tushirish: flutter pub get, so'ng flutter pub run flutter_launcher_icons
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  min_sdk_android: 21
+  adaptive_icon_background: "#2E5EAA"
+  adaptive_icon_foreground: "assets/icon/icon_foreground.png"
+  remove_alpha_ios: true
